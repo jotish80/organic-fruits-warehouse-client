@@ -18,6 +18,16 @@
     border-radius: 20px;
     border: 1px solid gray;
 }
+.login-button{
+    width: 400px;
+    height:40px;
+    border-radius: 20px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border: 1px solid gray;
+    padding-left: 15px;
+    background-color: aqua;
+}
 
 .register-button{
     width: 400px;
@@ -26,6 +36,7 @@
     font-size: 20px;
     margin-bottom: 10px;
     border: 1px solid gray;
+    padding-left: 15px;
 }
 .register-button:hover{
     color: orange;

@@ -1,12 +1,48 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import {signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import auth from '../../Firebase/firebase.init';
 import './Login.css';
 import { FcGoogle } from 'react-icons/fc';
 import { Link, useNavigate } from 'react-router-dom';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import {toast, ToastContainer} from 'react-toastify';
+ import 'react-toastify/dist/ReactToastify.css';
  
-
+ 
+toast.configure();
 const Login = () => {
+
+    const [signInWithEmailAndPassword,user,loading,error] = useSignInWithEmailAndPassword(auth);
+
+    let errorMassage;
+    if(error){
+        errorMassage = <div><p className='text-danger'>{error && "Email or Password is not correct"}</p></div>
+    }
+
+    const emailRef = useRef('');
+    const passRef = useRef('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const email = emailRef.current.value;
+        const password = passRef.current.value;
+        signInWithEmailAndPassword(email, password);
+    }
+
+     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+     
+     const resetPassword = async() => {
+
+        const email = emailRef.current.value;
+
+        if(email){
+            await sendPasswordResetEmail(email);
+            toast('Email Just Sent');
+        }
+        else{
+            toast('Enter Your Email Properly')
+        }
+     }
 
     const navigate = useNavigate();
     const navigateToRegister = (e) => {
@@ -18,7 +54,6 @@ const Login = () => {
         signInWithPopup(auth, provider)
         .then(result =>{
             const user = result.user;
-            console.log(user);
         })
         .catch((error =>{
             console.log(error);
@@ -27,20 +62,25 @@ const Login = () => {
 
     return (
         <div className='register-div'>
-            <div className='content-div'>
+            <ToastContainer />
+            <form onSubmit={handleSubmit} className='content-div'>
             <h2 className='text-center mb-3'>Login</h2>
              
-            <input   className='input-area' type="email" name="email" placeholder='Your Email' /> <br />
-            <input   className='input-area' type="password" name="password" placeholder='Your Password' /><br />
+            <input   className='input-area' type="email" name="email" ref={emailRef} placeholder='Your Email' /> <br />
+            <input   className='input-area' type="password" name="password" ref={passRef} placeholder='Password' /><br />
+            <button type='submit' className='login-button'>Login</button>
+            {errorMassage}
             <div className='border-div'>
                 <div className='border-separation'></div>
                 <p className='middle-paragraph'>OR</p>
                 <div className='border-separation'></div>
             </div>
-            <button onClick={handleSignInWithGoogle} className='register-button'><FcGoogle className="me-2 mb-1"/> Google Login</button>
+            <div>
+                <button onClick={handleSignInWithGoogle} className='register-button'><FcGoogle className="me-2 mb-1"/> Google Login</button>
              <p>New User? <Link to='/register' className='text-primary text-decoration-none' onClick={navigateToRegister}>Please Register</Link> </p>
-            <p>Forget Password?  </p>
+            <p>Forget Password? <button onClick={resetPassword} className='btn btn-link text-primary'>Reset Password </button></p>
             </div>
+            </form>
            
         </div>
     );
