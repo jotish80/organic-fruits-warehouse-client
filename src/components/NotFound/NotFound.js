@@ -3,7 +3,7 @@ import notFound from '../../Images/ErrorPage404-04.jpg';
 
 const NotFound = () => {
     return (
-        <div className='text-center'>
+        <div className='mx-auto'>
             <img style={{width: '65%'}} src={notFound} alt="" />
         </div>
     );

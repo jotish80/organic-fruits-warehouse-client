@@ -1,6 +1,8 @@
 import React from 'react';
 import {signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import auth from '../../Firebase/firebase.init';
+import './Login.css';
+import { FcGoogle } from 'react-icons/fc';
  
 
 const Login = () => {
@@ -18,13 +20,13 @@ const Login = () => {
     }
 
     return (
-        <div className='container w-25 mx-auto shadow-lg p-3 mb-5 bg-body rounded rounded-3'>
-            <div>
-            <h2 className='text-center mb-2'>Login</h2>
+        <div className='register-div'>
+            <div className='content-div'>
+            <h2 className='text-center mb-3'>Login</h2>
              
-            <input style={{borderRadius:'20px'}} className='w-100 mb-3' type="email" name="email" id="" /> <br />
-            <input style={{borderRadius:'20px'}} className='w-100 mb-3' type="password" name="password" id="" /><br />
-            <button style={{width: '100%', borderRadius:'20px'}} onClick={handleSignInWithGoogle}ick>Google sign in</button>
+            <input   className='input-area' type="email" name="email" id="" /> <br />
+            <input   className='input-area' type="password" name="password" id="" /><br />
+            <button onClick={handleSignInWithGoogle} className='register-button'><FcGoogle className="me-2 mb-1"/> Google Login</button>
             </div>
         </div>
     );
