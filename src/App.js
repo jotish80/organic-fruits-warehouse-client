@@ -11,13 +11,15 @@ import Register from './components/Register/Register';
 import Blogs from './components/Blogs/Blogs';
 import Navigation from './components/Navigation/Navigation';
  
+import NotFound from './components/NotFound/NotFound';
+ 
  
  function App() {
   return (
-    <div>
+    <>
        <Navigation />
-       <Banner />
-       <Login />
+       
+      
        <Routes>
          <Route path='/' element={<Home />}></Route>
          <Route path='/items' element={<Items />}></Route>
@@ -26,9 +28,10 @@ import Navigation from './components/Navigation/Navigation';
          <Route path='/Login' element={ <Login />} ></Route>
          <Route path='/register' element={ <Register />} ></Route>
          <Route path='/blogs' element={ <Blogs />} ></Route>
+         <Route path='*' element={ <NotFound />} ></Route>
        </Routes>
         
-    </div>
+    </>
   );
 }
 

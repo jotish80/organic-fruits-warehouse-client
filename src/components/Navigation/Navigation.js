@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import Banner from '../Banner/Banner';
 import CustomLink from '../CustomLink/CustomLink';
 
 const Navigation = () => {
@@ -11,7 +12,7 @@ const Navigation = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mx-auto">
-                            <CustomLink className='nav-link active fs-5' to="/home">Home</CustomLink>
+                            <CustomLink className='nav-link active fs-5' to="/">Home</CustomLink>
                             <CustomLink className='nav-link active fs-5' to="/items">Items</CustomLink>
                             <CustomLink className='nav-link active fs-5' to="/manageitems">ManageItems</CustomLink>
                             <CustomLink className='nav-link active fs-5' to="/myitems">MyItems</CustomLink>
@@ -22,6 +23,7 @@ const Navigation = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+          
         </div>
     );
 };
