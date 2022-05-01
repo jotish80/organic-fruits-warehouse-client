@@ -34,7 +34,7 @@ const Blogs = () => {
                 </table>
             </div>
             <div className='mt-3 row'>
-                <div className='col-md-6'>
+                <div className='col-md-7'>
                     <h2>When should you use NodeJs?</h2>
                     <p>
                         I should use NodeJs when I know:
@@ -49,7 +49,7 @@ const Blogs = () => {
 
                     </p>
                 </div>
-                <div className='col-md-6'>
+                <div className='col-md-5'>
                     <h2>When should you use Mongodb?</h2>
                     <p>
                         I should use Mongodb reasons are:

@@ -11,6 +11,7 @@ import Blogs from './components/Blogs/Blogs';
 import Navigation from './components/Navigation/Navigation';
  
 import NotFound from './components/NotFound/NotFound';
+import Footer from './components/Footer/Footer';
  
  
  function App() {
@@ -29,7 +30,7 @@ import NotFound from './components/NotFound/NotFound';
          <Route path='/blogs' element={ <Blogs />} ></Route>
          <Route path='*' element={ <NotFound />} ></Route>
        </Routes>
-        
+        <Footer />
     </>
   );
 }
