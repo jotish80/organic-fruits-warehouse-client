@@ -6,7 +6,7 @@ import CustomLink from '../CustomLink/CustomLink';
 const Navigation = () => {
     return (
         <div  className='sticky-top'>
-            <Navbar  bg="light" expand="lg">
+            <Navbar style={{backgroundColor: '#7FB401'}} expand="lg">
                 <Container>
                     <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />

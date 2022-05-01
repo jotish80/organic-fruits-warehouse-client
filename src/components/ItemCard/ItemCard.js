@@ -18,7 +18,7 @@ const ItemCard = (props) => {
                 <h5 className="card-title">{name}</h5>
                 <p className="card-text"> {description}</p>
                 <h5>${price}</h5>
-                 <button onClick={()=>navigateToItemDetail(id) } className="btn btn-primary w-100">Update Stock </button>
+                 <button style={{backgroundColor:'#7AA93C'}} onClick={()=>navigateToItemDetail(id) } className="btn w-100 text-dark fs-5">Update Stock </button>
             </div>
         </div>
         </div>

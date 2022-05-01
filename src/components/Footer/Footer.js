@@ -15,7 +15,7 @@ const Footer = () => {
                                     <h3>Our Opinion</h3>
                                 </div>
                                 <div className="footer-text">
-                                    <p> If you have ever been inside a grocery store, you have probably noticed the produce section. Mountains of lemons, piles of tomatoes, rows of cucumbers, several kinds of apples, and more. Some of these items you might know as fruits, and others as vegetables. But what is the difference between a fruit and a vegetable? When you eat an apple, strawberry, or peach, what part of the plant are you eating? Please explores our knowledge of fruits and how to properly identify them.. </p>
+                                    <p> If you have ever been inside a grocery store, you have probably noticed the produce section. Mountains of lemons, piles of tomatoes, rows of cucumbers, several kinds of apples, and more. Some of these items you might know as fruits, and others as vegetables.We should know the difference between a fruit and a vegetable </p>
                                 </div>
                                  
                             </div>

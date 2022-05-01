@@ -1,0 +1,12 @@
+h1{
+    font-family: 'Hurricane', cursive;
+    font-family: 'Libre Bodoni', serif;
+}
+
+.farmer{
+    transition: 1000ms;
+}
+
+.farmer:hover{
+    transform:scale(0.9)
+}
