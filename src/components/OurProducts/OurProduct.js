@@ -4,7 +4,7 @@ import './OurProduct.css';
 const OurProduct = () => {
     return (
         <div>
-            <h1 className='text-center mb-5'>Our Other Stock</h1>
+            <h1 className='text-center mt-5 mb-5'>Our Other Stock</h1>
             <div className="card-deck container mb-3">
                 <div className="card border-0 farmer">
                     <img style={{width:'100%'}} src="https://i.ibb.co/1q2WB2t/giorgio-trovato-fcz-Cr7-Md-E7-U-unsplash.jpg" className="card-img-top" alt="..." />

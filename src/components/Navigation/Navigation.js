@@ -1,9 +1,13 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../Firebase/firebase.init';
 import Banner from '../Banner/Banner';
 import CustomLink from '../CustomLink/CustomLink';
 
 const Navigation = () => {
+    
     return (
         <div  className='sticky-top'>
             <Navbar style={{backgroundColor: '#7FB401'}} expand="lg">
@@ -16,7 +20,12 @@ const Navigation = () => {
                             <CustomLink className='nav-link active fs-5' to="/items">Items</CustomLink>
                             <CustomLink className='nav-link active fs-5' to="/manageitems">ManageItems</CustomLink>
                             <CustomLink className='nav-link active fs-5' to="/myitems">MyItems</CustomLink>
-                            <CustomLink className='nav-link active fs-5' to="/login">Login</CustomLink>
+                           
+                                
+                                
+                              
+                                <CustomLink className='nav-link active fs-5' to="/login">Login</CustomLink>
+                             
                             <CustomLink className='nav-link active fs-5' to="/register">Register</CustomLink>
                             <CustomLink className='nav-link active fs-5' to="/blogs">Blogs</CustomLink>
                         </Nav>

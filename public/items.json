@@ -2,26 +2,57 @@
   {
     "id": "1",
     "name": "Papaya",
-    "price": 1000,
-    "quantity": 500,
-    "description":"A Fitness Trainer, or Fitness Instructor, provides fitness guidance to help clients improve their physical condition.",
+    "price": 200,
+    "quantity": 1000,
+    "supplierName": "Mark",
+    "description":"Full of stock Papaya. We have 1000 pice. Price for each pice is 200. Healthy fruits like Papaya is most acceptable for our clients.",
     "img": "https://i.ibb.co/MNsxVLq/pranjall-kumar-ipmk-Jx06-XFM-unsplash.jpg"
   },
   {
     "id": "2",
-    "name": "strawberry",
-    "price": 2000,
-    "quantity": 400,
-    "description": "You will assess the physical and health conditions of clients, create appropriate exercise plans, and monitor their improvement.",
+    "name": "Strawberry",
+    "price": 250,
+    "quantity": 1500,
+    "supplierName":"John",
+    "description": "The stock is available now. 250 for every kg. We have 1500 cartoon. Full of vitamin c and as an organic fruit getting popular.",
     "img": "https://i.ibb.co/QXFzgCy/enrique-esquinca-d-Agl2u4-Jn-Fo-unsplash.jpg"
   },
   {
     "id": "3",
     "name": "Mango",
-    "price": 1050,
-    "quantity": 300,
-    "description":"You will maximize the quality of life and movement potential within.Monitor their improvement.It is important to have a trainer.",
-    "img": "https://i.ibb.co/MNsxVLq/pranjall-kumar-ipmk-Jx06-XFM-unsplash.jpg"
+    "price": 350,
+    "quantity": 1800,
+    "supplierName":"Thomson",
+    "description":"We have enough in stock right now. 350 per kg. Quantity remaining 1800. Our community need more mangoes like our organic fruit.",
+    "img": "https://i.ibb.co/qMM1xDH/alexander-schimmeck-v-TXt-Q8-ZBzv-Y-unsplash.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Pomegranate",
+    "price": 250,
+    "quantity": 1400,
+    "supplierName":"Petter",
+    "description":"We have almost enough in stock. 250 per kg. Quantity 1400 kg. This fruit has such a quality for health. To increase blood.",
+    "img": "https://i.ibb.co/DbH2KH9/jonas-renner-LOd-AL10-Jej-I-unsplash.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Black Berry",
+    "price": 450,
+    "quantity": 1000,
+    "supplierName":"Alex",
+    "description":"Our stock is available for Black Berry. 450 per kg. Quantity 100kg. To prevent so many diseases. More need for our health.",
+    "img": "https://i.ibb.co/ZcXSmwC/andrew-welch-i5-Crg4-KLbl-Y-unsplash.jpg"
+  },
+  {
+    "id": "6",
+    "name": "Pera",
+    "price": 500,
+    "quantity": 1000,
+    "supplierName":"Robert",
+    "description":"We can ensure enough our stock is available. 500 per kg. 100kg is available now. We can bring more as long as client concern.",
+    "img": "https://i.ibb.co/zbTssm3/delia-giandeini-TXL9r7-G8-SMo-unsplash.jpg"
   }
+  
    
 ]

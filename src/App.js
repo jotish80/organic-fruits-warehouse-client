@@ -12,6 +12,8 @@ import Navigation from './components/Navigation/Navigation';
  
 import NotFound from './components/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
+import RequireAuth from './components/RequireAuth/RequireAuth';
+import ItemDetails from './components/ItemDetails/ItemDetails';
  
  
  function App() {
@@ -23,6 +25,11 @@ import Footer from './components/Footer/Footer';
        <Routes>
          <Route path='/' element={<Home />}></Route>
          <Route path='/items' element={<Items />}></Route>
+          <Route path='items/:itemsId' element={
+            <RequireAuth>
+              <ItemDetails />
+            </RequireAuth>
+          }></Route>
          <Route path='/manageitems' element={ <ManageItems />}></Route>
          <Route path='/myitems' element={<MyItems /> }></Route>
          <Route path='/Login' element={ <Login />} ></Route>

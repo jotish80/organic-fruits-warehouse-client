@@ -1,5 +1,11 @@
 import React from 'react';
 import './Footer.css';
+import { GrFacebook } from 'react-icons/gr';
+import { FiTwitter } from 'react-icons/fi';
+import { SiInstagram } from 'react-icons/si';
+import { FaGoogle } from 'react-icons/fa';
+import { TiSocialYoutube, TiSocialLinkedin } from 'react-icons/ti';
+
 
 const Footer = () => {
     const today = new Date();
@@ -53,6 +59,10 @@ const Footer = () => {
                                         <button><i className="fab fa-telegram-plane"></i></button>
                                     </form>
                                 </div>
+                                
+                            </div>
+                            <div className='mt-3'>
+                                <GrFacebook style={{color:'white', marginRight:'50px'}} /><FiTwitter style={{color:'white', marginRight:'50px'}} /> <SiInstagram style={{color:'white', marginRight:'50px'}} /> <TiSocialYoutube style={{color:'white', marginRight:'50px'}} /> <TiSocialLinkedin  style={{color:'white', marginRight:'50px'}}/> <FaGoogle style={{color:'white', marginRight:'50px'}} />
                             </div>
                         </div>
                     </div>
