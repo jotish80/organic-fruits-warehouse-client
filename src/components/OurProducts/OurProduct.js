@@ -32,7 +32,7 @@ const OurProduct = () => {
             </div>
             <div className="card-deck container">
                 <div className="card border-0 farmer">
-                    <img style={{width:'100%', height:'400px', objectFit:'cover'}} src="https://i.ibb.co/fv8hTHh/asso-myron-Tsgxg-SVL61s-unsplash.jpg" className="card-img-top" alt="..." />
+                    <img style={{width:'100%', height:'400px', bjectFit:'cover'}} src="https://i.ibb.co/fv8hTHh/asso-myron-Tsgxg-SVL61s-unsplash.jpg" className="card-img-top" alt="..." />
                     <div className="card-body">
                         <h5 className="card-title text-center">Pineapples</h5>
                          
