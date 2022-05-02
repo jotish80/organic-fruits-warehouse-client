@@ -2,55 +2,55 @@
   {
     "id": "1",
     "name": "Papaya",
-    "price": 200,
-    "quantity": 1000,
+    "price": 100,
+    "quantity": 100,
     "supplierName": "Mark",
-    "description":"Full of stock Papaya. We have 1000 pice. Price for each pice is 200. Healthy fruits like Papaya is most acceptable for our clients.",
+    "description":"Full of stock Papaya. We have 100 pice. Price for each pice is 100. Healthy fruits like Papaya is most acceptable for our clients.",
     "img": "https://i.ibb.co/MNsxVLq/pranjall-kumar-ipmk-Jx06-XFM-unsplash.jpg"
   },
   {
     "id": "2",
     "name": "Strawberry",
-    "price": 250,
-    "quantity": 1500,
+    "price": 150,
+    "quantity": 100,
     "supplierName":"John",
-    "description": "The stock is available now. 250 for every kg. We have 1500 cartoon. Full of vitamin c and as an organic fruit getting popular.",
+    "description": "The stock is available now. 150 for every kg. We have 100 cartoon. Full of vitamin c and as an organic fruit getting popular.",
     "img": "https://i.ibb.co/QXFzgCy/enrique-esquinca-d-Agl2u4-Jn-Fo-unsplash.jpg"
   },
   {
     "id": "3",
     "name": "Mango",
-    "price": 350,
-    "quantity": 1800,
+    "price": 50,
+    "quantity": 120,
     "supplierName":"Thomson",
-    "description":"We have enough in stock right now. 350 per kg. Quantity remaining 1800. Our community need more mangoes like our organic fruit.",
+    "description":"We have enough in stock right now. 50 per kg. Quantity remaining 120. Our community need more mangoes like our organic fruit.",
     "img": "https://i.ibb.co/qMM1xDH/alexander-schimmeck-v-TXt-Q8-ZBzv-Y-unsplash.jpg"
   },
   {
     "id": "4",
     "name": "Pomegranate",
-    "price": 250,
-    "quantity": 1400,
+    "price": 60,
+    "quantity": 130,
     "supplierName":"Petter",
-    "description":"We have almost enough in stock. 250 per kg. Quantity 1400 kg. This fruit has such a quality for health. To increase blood.",
+    "description":"We have almost enough in stock. 60 per kg. Quantity 130 kg. This fruit has such a quality for health. To increase blood.",
     "img": "https://i.ibb.co/DbH2KH9/jonas-renner-LOd-AL10-Jej-I-unsplash.jpg"
   },
   {
     "id": "5",
     "name": "Black Berry",
-    "price": 450,
-    "quantity": 1000,
+    "price": 50,
+    "quantity": 140,
     "supplierName":"Alex",
-    "description":"Our stock is available for Black Berry. 450 per kg. Quantity 100kg. To prevent so many diseases. More need for our health.",
+    "description":"Our stock is available for Black Berry. 50 per kg. Quantity 140kg. To prevent so many diseases. More need for our health.",
     "img": "https://i.ibb.co/ZcXSmwC/andrew-welch-i5-Crg4-KLbl-Y-unsplash.jpg"
   },
   {
     "id": "6",
     "name": "Pera",
-    "price": 500,
-    "quantity": 1000,
+    "price": 30,
+    "quantity": 100,
     "supplierName":"Robert",
-    "description":"We can ensure enough our stock is available. 500 per kg. 100kg is available now. We can bring more as long as client concern.",
+    "description":"We can ensure enough our stock is available. 30 per kg. 100kg is available now. We can bring more as long as client concern.",
     "img": "https://i.ibb.co/zbTssm3/delia-giandeini-TXL9r7-G8-SMo-unsplash.jpg"
   }
   

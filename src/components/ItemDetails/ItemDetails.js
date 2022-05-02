@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 const ItemDetails = () => {
 
@@ -8,10 +8,10 @@ const ItemDetails = () => {
 
 
     useEffect(() => {
-        fetch('../../items.json')
+        fetch('http://localhost:5000/items')
             .then(res => res.json())
             .then(data => {
-                const items = data.filter(item => item.id == itemsId)
+                const items = data.filter(item => item._id == itemsId)
                 setItems(items[0])
             })
     }, []);
@@ -37,7 +37,8 @@ const ItemDetails = () => {
                     <label className="form-label">Number</label>
                     <input type="number" className="form-control"/>
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button>
+                <button type="submit" className="btn btn-primary">Submit</button> <br />
+                 <Link to='/manageitems'><button className='btn btn-link mt-5 fs-5'>Manage Inventories</button></Link>
             </form>
         </div>
     );

@@ -7,12 +7,14 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../Loading/Loading';
 
 
 toast.configure();
 const Login = () => {
 
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+    
 
     let errorMassage;
     if (error) {
@@ -30,6 +32,7 @@ const Login = () => {
     }
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+     
 
     const resetPassword = async () => {
 
@@ -46,6 +49,10 @@ const Login = () => {
 
     const location = useLocation();
     const from = location.state?.from?.pathname ||'/';
+
+    if(user){
+        navigate(from, { replace: true });
+    }
 
     const navigate = useNavigate();
     const navigateToRegister = (e) => {

@@ -1,18 +1,18 @@
-# Getting Started with Create React App
+# Organic Fruits Warehouse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ [Organic-Fruits-Warehouse] ()
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### This project is used by the following features:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ * Home page contain navbar, banner, items, our more products,  farmer information and footer.
+ * Items section if you choose one item it will bring you to protected route and if you sign in then you can access item.
+ * This project has connected to the database called mongodb.
+ * Every item you add or delete totally managed with database.
+ * Technologies used like React js, node js, mongodb, react bootstrap, Firebase authentication and react toastify.
 
 ### `npm test`
 
