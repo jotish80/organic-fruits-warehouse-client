@@ -12,9 +12,7 @@ const Register = () => {
 
         const location = useLocation();
         const from = location.state?.from?.pathname || '/';
-        if (user) {
-        navigate(from, { replace: true });
-        }
+         
         const navigate = useNavigate();
         const navigateToLogin = () =>{
             navigate('/login');

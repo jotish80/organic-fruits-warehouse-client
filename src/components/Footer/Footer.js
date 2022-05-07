@@ -32,16 +32,16 @@ const Footer = () => {
                                     <h3>Useful Links</h3>
                                 </div>
                                 <ul>
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">about</a></li>
+                                    <li><a className='btn btn-link'>Home</a></li>
+                                    <li><a className='btn btn-link'>about</a></li>
                                     <li><a href="#">services</a></li>
-                                    <li><a href="#">portfolio</a></li>
-                                    <li><a href="#">Contact</a></li>
-                                    <li><a href="#">About us</a></li>
-                                    <li><a href="#">Our Services</a></li>
-                                    <li><a href="#">Expert Team</a></li>
-                                    <li><a href="#">Contact us</a></li>
-                                    <li><a href="#">Latest News</a></li>
+                                    <li><a className='btn btn-link'>portfolio</a></li>
+                                    <li><a className='btn btn-link'>Contact</a></li>
+                                    <li><a className='btn btn-link'>About us</a></li>
+                                    <li><a className='btn btn-link'>Our Services</a></li>
+                                    <li><a className='btn btn-link'>Expert Team</a></li>
+                                    <li><a className='btn btn-link'>Contact us</a></li>
+                                    <li><a className='btn btn-link'>Latest News</a></li>
                                 </ul>
                             </div>
                         </div>

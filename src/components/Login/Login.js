@@ -8,6 +8,7 @@ import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../Loading/Loading';
+import axios from 'axios';
 
 
 toast.configure();
@@ -29,6 +30,10 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passRef.current.value;
         signInWithEmailAndPassword(email, password);
+        navigate('/')
+        // const {data} = await axios.post('https://sheltered-fortress-61368.herokuapp.com/login', {email});
+        // console.log(data);
+
     }
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
@@ -40,10 +45,10 @@ const Login = () => {
 
         if (email) {
             await sendPasswordResetEmail(email);
-            toast('Email Just Sent');
+            toast('Email Just Sent', {position: toast.POSITION.TOP_CENTER});
         }
         else {
-            toast('Enter Your Email Properly')
+            toast('Enter Your Email Properly',{position: toast.POSITION.TOP_CENTER})
         }
     }
 

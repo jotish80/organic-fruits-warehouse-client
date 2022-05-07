@@ -11,7 +11,7 @@ import logo from '../../Images/logo.png';
 const Navigation = () => {
 
     const [user] = useAuthState(auth);
-    console.log(user);
+    
 
     const handleLogOut = () => {
         signOut(auth)

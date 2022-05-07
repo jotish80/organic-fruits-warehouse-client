@@ -1,24 +1,75 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
 
 const ItemDetails = () => {
 
     const { itemsId } = useParams();
     const [items, setItems] = useState({});
-
+    const [quantity, setQuantity] = useState(0);
+    const [change, setChanges] = useState('hello');
 
     useEffect(() => {
-        fetch('http://localhost:5000/items')
+        fetch('https://sheltered-fortress-61368.herokuapp.com/item/' + itemsId)
             .then(res => res.json())
             .then(data => {
-                const items = data.filter(item => item._id == itemsId)
-                setItems(items[0])
+                setItems(data);
+                
             })
-    }, []);
 
+    }, [change]);
+
+    const handleDeliver = () => {
+
+        const url = `https://sheltered-fortress-61368.herokuapp.com/items/${itemsId}`
+        fetch(url, {
+
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+
+        })
+            .then(res => {
+                res.json()
+
+            })
+            .then(data => {
+                console.log(parseInt(data?.count));
+                toast('Delivered', {position: toast.POSITION.TOP_CENTER});
+                setQuantity(parseInt(data?.count))
+                setChanges('update')
+            })
+        console.log(quantity);
+    }
+
+
+
+    const handleUpdateCount = () => {
+        const updatedQuantity = { number: quantity };
+        //send data to server
+        fetch(`https://sheltered-fortress-61368.herokuapp.com/updatequantity/${itemsId}`, {
+
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(updatedQuantity)
+        })
+            .then(res => res.json())
+            .then(data => {
+                toast('Quantity added successfully', {position: toast.POSITION.TOP_CENTER});
+                setItems(data);
+                setQuantity('');
+                setChanges('something changed')
+            })
+
+    }
 
     return (
         <div className='container mt-5 text-center row mx-auto'>
+            <ToastContainer />
+            <Link to='/manageitems'><button className='btn btn-link mt-5 fs-5 text-success'>Manage Inventories</button></Link>
             <div className='col-md-6'>
                 <div className="card" style={{ width: '22rem' }}>
                     <img src={items.img} className="card-img-top" alt="..." />
@@ -28,18 +79,19 @@ const ItemDetails = () => {
                         <h5>${items.price}</h5>
                         <h5>Quantity: {items.quantity}</h5>
                         <h5>Supplier: {items.supplierName}</h5>
-                        <button style={{ backgroundColor: '#7AA93C' }} className="btn w-100 text-dark fs-5">Delivered </button>
+                        <button onClick={handleDeliver} style={{ backgroundColor: '#7AA93C' }} className="btn w-100 text-dark fs-5">Delivered </button>
                     </div>
                 </div>
             </div>
-            <form className='col-md-6'>
+            <div style ={{marginTop: '200px'}} className='col-md-6'>
                 <div className="mb-3">
-                    <label className="form-label">Number</label>
-                    <input type="number" className="form-control"/>
+                    <label className="form-label">Add quantity</label>
+                    <input onChange={(e) => setQuantity(e.target.value)} value={quantity} type="number" name='number' className="form-control" />
                 </div>
-                <button type="submit" className="btn btn-primary">Submit</button> <br />
-                 <Link to='/manageitems'><button className='btn btn-link mt-5 fs-5'>Manage Inventories</button></Link>
-            </form>
+                <button onClick={handleUpdateCount} className="btn btn-primary">Increase Quantity</button> <br />
+
+            </div>
+
         </div>
     );
 };

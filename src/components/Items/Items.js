@@ -12,7 +12,7 @@ const Items = () => {
             {
                 items.map(item => <ItemCard item={item} key={item._id} />)
             }
-            <Link to='/manageitems'><button className='btn btn-link fs-5 mt-5 text-center mb-5'>Manage Inventories</button></Link>
+            <Link to='/manageitems'><button className='btn btn-link fs-5 mt-5 text-center text-success mb-5'>Manage Inventories</button></Link>
         </div>
     );
 };
