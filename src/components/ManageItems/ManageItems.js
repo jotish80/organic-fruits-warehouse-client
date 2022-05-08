@@ -1,7 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../Firebase/firebase.init';
 import useItems from '../Hooks/useItems';
 
@@ -33,7 +32,7 @@ const ManageItems = () => {
     // new item add by using react hook form
     const onSubmit = (data) => {
         console.log(data)
-        const url = `https://sheltered-fortress-61368.herokuapp.com//items`;
+        const url = `https://sheltered-fortress-61368.herokuapp.com/items`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -44,7 +43,7 @@ const ManageItems = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
-                toast('New item added successfully', { position: toast.POSITION.TOP_CENTER });
+                alert('New item added successfully');
 
             })
 
@@ -53,7 +52,7 @@ const ManageItems = () => {
     return (
         <>
             <div className='w-25 mx-auto'>
-                <ToastContainer />
+              
                 <h1 className='mt-3  mb-3' >Manage items</h1>
                 <form className='d-flex flex-column shadow-lg p-3 rounded-3' onSubmit={handleSubmit(onSubmit)}>
                     <h4 className='text-center'>Add items</h4>
