@@ -9,7 +9,6 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Blogs from './components/Blogs/Blogs';
 import Navigation from './components/Navigation/Navigation';
-
 import NotFound from './components/NotFound/NotFound';
 import Footer from './components/Footer/Footer';
 import RequireAuth from './components/RequireAuth/RequireAuth';

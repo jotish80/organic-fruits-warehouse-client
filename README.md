@@ -1,6 +1,6 @@
 # Organic Fruits Warehouse
 
- [Organic-Fruits-Warehouse] ()
+ [Organic-Fruits-Warehouse] (https://organic-fruits-warehouse.web.app/)
 
 ## Available Scripts
 
@@ -12,6 +12,7 @@ In the project directory, you can run:
  * Items section if you choose one item it will bring you to protected route and if you sign in then you can access item.
  * This project has connected to the database called mongodb.
  * Every item you add or delete totally managed with database.
+ * Server side code deployed in Heroku.
  * Technologies used like React js, node js, mongodb, react bootstrap, Firebase authentication and react toastify.
 
 ### `npm test`

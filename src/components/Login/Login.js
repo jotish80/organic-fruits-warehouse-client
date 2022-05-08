@@ -7,15 +7,12 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import Loading from '../Loading/Loading';
-import axios from 'axios';
-
-
+ 
 toast.configure();
+
 const Login = () => {
 
     const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
-    
 
     let errorMassage;
     if (error) {
@@ -25,19 +22,17 @@ const Login = () => {
     const emailRef = useRef('');
     const passRef = useRef('');
 
+    // sign in with email and password
     const handleSubmit = (e) => {
         e.preventDefault();
         const email = emailRef.current.value;
         const password = passRef.current.value;
         signInWithEmailAndPassword(email, password);
         navigate('/')
-        // const {data} = await axios.post('https://sheltered-fortress-61368.herokuapp.com/login', {email});
-        // console.log(data);
-
     }
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-     
+
 
     const resetPassword = async () => {
 
@@ -45,17 +40,17 @@ const Login = () => {
 
         if (email) {
             await sendPasswordResetEmail(email);
-            toast('Email Just Sent', {position: toast.POSITION.TOP_CENTER});
+            toast('Email Just Sent', { position: toast.POSITION.TOP_CENTER });
         }
         else {
-            toast('Enter Your Email Properly',{position: toast.POSITION.TOP_CENTER})
+            toast('Enter Your Email Properly', { position: toast.POSITION.TOP_CENTER })
         }
     }
 
     const location = useLocation();
-    const from = location.state?.from?.pathname ||'/';
+    const from = location.state?.from?.pathname || '/';
 
-    if(user){
+    if (user) {
         navigate(from, { replace: true });
     }
 
@@ -64,12 +59,13 @@ const Login = () => {
         navigate('/register');
     }
 
+    // Google sign in with popup
     const provider = new GoogleAuthProvider();
     const handleSignInWithGoogle = () => {
         signInWithPopup(auth, provider)
             .then(result => {
                 const user = result.user;
-                navigate(from, {replace: true});
+                navigate(from, { replace: true });
             })
             .catch((error => {
                 console.log(error);

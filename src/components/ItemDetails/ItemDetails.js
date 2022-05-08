@@ -10,7 +10,7 @@ const ItemDetails = () => {
     const [change, setChanges] = useState('hello');
 
     useEffect(() => {
-        fetch(`https://sheltered-fortress-61368.herokuapp.com/item/${itemsId}` )
+        fetch(`https://sheltered-fortress-61368.herokuapp.com/item/${itemsId}`)
             .then(res => res.json())
             .then(data => {
                 setItems(data);
@@ -35,7 +35,7 @@ const ItemDetails = () => {
             })
             .then(data => {
                 console.log(parseInt(data?.count));
-                toast('Delivered', {position: toast.POSITION.TOP_CENTER});
+                toast('Delivered', { position: toast.POSITION.TOP_CENTER });
                 setQuantity(parseInt(data?.count))
                 setChanges('update')
             })
@@ -57,7 +57,7 @@ const ItemDetails = () => {
         })
             .then(res => res.json())
             .then(data => {
-                toast('Quantity added successfully', {position: toast.POSITION.TOP_CENTER});
+                toast('Quantity added successfully', { position: toast.POSITION.TOP_CENTER });
                 setItems(data);
                 setQuantity('');
                 setChanges('something changed')
@@ -82,12 +82,12 @@ const ItemDetails = () => {
                     </div>
                 </div>
             </div>
-            <div style ={{marginTop: '200px'}} className='col-md-6'>
+            <div style={{ marginTop: '200px' }} className='col-md-6'>
                 <div className="mb-3">
-                    <h3 className="form-label">Add quantity</h3>
+                    <h3 className="form-label">Restock the items</h3>
                     <input onChange={(e) => setQuantity(e.target.value)} value={quantity} type="number" name='number' className="form-control" />
                 </div>
-                <button onClick={handleUpdateCount} className="btn btn-primary">Increase Quantity</button> <br />
+                <button style={{ backgroundColor: '#7AA93C' }} onClick={handleUpdateCount} className="btn text-dark fs-5">Increase Quantity</button> <br />
 
             </div>
 

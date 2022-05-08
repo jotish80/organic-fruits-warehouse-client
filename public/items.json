@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "Papaya",
-    "price": 100,
+    "price": 50,
     "quantity": 100,
     "supplierName": "Mark",
     "description":"Full of stock Papaya. We have 100 pice. Price for each pice is 100. Healthy fruits like Papaya is most acceptable for our clients.",
@@ -11,7 +11,7 @@
   {
     "id": "2",
     "name": "Strawberry",
-    "price": 150,
+    "price": 40,
     "quantity": 100,
     "supplierName":"John",
     "description": "The stock is available now. 150 for every kg. We have 100 cartoon. Full of vitamin c and as an organic fruit getting popular.",
@@ -20,7 +20,7 @@
   {
     "id": "3",
     "name": "Mango",
-    "price": 50,
+    "price": 60,
     "quantity": 120,
     "supplierName":"Thomson",
     "description":"We have enough in stock right now. 50 per kg. Quantity remaining 120. Our community need more mangoes like our organic fruit.",
@@ -29,7 +29,7 @@
   {
     "id": "4",
     "name": "Pomegranate",
-    "price": 60,
+    "price": 30,
     "quantity": 130,
     "supplierName":"Petter",
     "description":"We have almost enough in stock. 60 per kg. Quantity 130 kg. This fruit has such a quality for health. To increase blood.",
@@ -39,7 +39,7 @@
     "id": "5",
     "name": "Black Berry",
     "price": 50,
-    "quantity": 140,
+    "quantity": 120,
     "supplierName":"Alex",
     "description":"Our stock is available for Black Berry. 50 per kg. Quantity 140kg. To prevent so many diseases. More need for our health.",
     "img": "https://i.ibb.co/ZcXSmwC/andrew-welch-i5-Crg4-KLbl-Y-unsplash.jpg"

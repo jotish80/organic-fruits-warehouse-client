@@ -12,7 +12,6 @@ const Navigation = () => {
 
     const [user] = useAuthState(auth);
     
-
     const handleLogOut = () => {
         signOut(auth)
     }
