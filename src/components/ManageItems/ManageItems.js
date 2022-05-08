@@ -14,7 +14,7 @@ const ManageItems = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = (`https://sheltered-fortress-61368.herokuapp.com/items/${id}`);
+            const url = (` https://git.heroku.com/sheltered-fortress-61368.git/items/${id}`);
             fetch(url, {
                 method: 'DELETE'
             })
@@ -32,7 +32,7 @@ const ManageItems = () => {
     // new item add by using react hook form
     const onSubmit = (data) => {
         console.log(data)
-        const url = `https://sheltered-fortress-61368.herokuapp.com/items`;
+        const url = ` https://git.heroku.com/sheltered-fortress-61368.git/items`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -52,7 +52,6 @@ const ManageItems = () => {
     return (
         <>
             <div className='w-25 mx-auto'>
-              
                 <h1 className='mt-3  mb-3' >Manage items</h1>
                 <form className='d-flex flex-column shadow-lg p-3 rounded-3' onSubmit={handleSubmit(onSubmit)}>
                     <h4 className='text-center'>Add items</h4>

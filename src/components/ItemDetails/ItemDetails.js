@@ -10,7 +10,7 @@ const ItemDetails = () => {
     const [change, setChanges] = useState('hello');
 
     useEffect(() => {
-        fetch(`https://sheltered-fortress-61368.herokuapp.com/item/${itemsId}`)
+        fetch(` https://git.heroku.com/sheltered-fortress-61368.git/item/${itemsId}`)
             .then(res => res.json())
             .then(data => {
                 setItems(data);
@@ -20,7 +20,7 @@ const ItemDetails = () => {
 
     const handleDeliver = () => {
 
-        const url = `https://sheltered-fortress-61368.herokuapp.com/items/${itemsId}`
+        const url = ` https://git.heroku.com/sheltered-fortress-61368.git/items/${itemsId}`
         fetch(url, {
 
             method: 'PATCH',
@@ -47,7 +47,7 @@ const ItemDetails = () => {
     const handleUpdateCount = () => {
         const updatedQuantity = { number: quantity };
         //send data to server
-        fetch(`https://sheltered-fortress-61368.herokuapp.com/updatequantity/${itemsId}`, {
+        fetch(` https://git.heroku.com/sheltered-fortress-61368.git/updatequantity/${itemsId}`, {
 
             method: 'PATCH',
             headers: {

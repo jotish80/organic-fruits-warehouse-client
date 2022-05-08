@@ -7,26 +7,26 @@ const MyItems = () => {
     const [user] = useAuthState(auth);
     const[orders, setOrders] = useState([]);
    
-
     useEffect(() => {
         const email = user.email;
-        fetch(`https://sheltered-fortress-61368.herokuapp.com/orders?email=${email}`)
+        fetch(` https://git.heroku.com/sheltered-fortress-61368.git/orders?email=${email}`)
         .then(res =>res.json())
         .then(data=> setOrders(data))
          
-    },[user]);
+    },[]);
 
      // deleting items by logged user
      const handleDelete = (id) => {
+         
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = (`https://sheltered-fortress-61368.herokuapp.com/orders${id}`);
+            const url = (` https://git.heroku.com/sheltered-fortress-61368.git/orders/${id}/${user.email}`);
             fetch(url, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
-                .then(data => {
-                    console.log(data);
+                .then(result => {
+                    console.log(result);
                     const remaining = orders.filter(order=> order._id !== id)
                    setOrders(remaining);
                 })
@@ -44,7 +44,6 @@ const MyItems = () => {
                                 <h5 class="card-title">Name: {order.name}</h5>
                                 <h5 class="card-title">Quantity: {order.quantity}  </h5>
                                 <h5 class="card-title">Price: {order.price}  </h5>
-                                 
                                 <button onClick={()=>handleDelete(order._id)} class="btn btn-success">Delete</button>
                             </div>
                         </div>

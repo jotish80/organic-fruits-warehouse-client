@@ -2,9 +2,6 @@
 
  [Organic-Fruits-Warehouse] (https://organic-fruits-warehouse.web.app/)
 
-## Available Scripts
-
-In the project directory, you can run:
 
 ### This project is used by the following features:
 
