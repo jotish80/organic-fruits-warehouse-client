@@ -6,7 +6,7 @@ const useItems = () => {
     
 
     useEffect(() =>{
-        fetch(' https://git.heroku.com/sheltered-fortress-61368.git/items')
+        fetch('https://sheltered-fortress-61368.herokuapp.com/items')
         .then(res => res.json())
         .then(data => setItems(data))
     }, [change]) 

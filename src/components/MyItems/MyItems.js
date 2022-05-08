@@ -9,7 +9,7 @@ const MyItems = () => {
    
     useEffect(() => {
         const email = user.email;
-        fetch(` https://git.heroku.com/sheltered-fortress-61368.git/orders?email=${email}`)
+        fetch(`https://sheltered-fortress-61368.herokuapp.com/orders?email=${email}`)
         .then(res =>res.json())
         .then(data=> setOrders(data))
          
@@ -20,7 +20,7 @@ const MyItems = () => {
          
         const proceed = window.confirm('Are you sure?');
         if (proceed) {
-            const url = (` https://git.heroku.com/sheltered-fortress-61368.git/orders/${id}/${user.email}`);
+            const url = (`https://sheltered-fortress-61368.herokuapp.com/orders/${id}/${user.email}`);
             fetch(url, {
                 method: 'DELETE'
             })
