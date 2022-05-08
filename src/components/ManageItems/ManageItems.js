@@ -7,7 +7,8 @@ import useItems from '../Hooks/useItems';
 const ManageItems = () => {
     
      const [user] = useAuthState(auth);
-     const [items, setItems] = useItems();
+     const [items, setItems] = useItems([]);
+     console.log(items);
      
     const handleDelete = (id) => {
         const proceed = window.confirm('Are you sure?');
@@ -40,6 +41,7 @@ const ManageItems = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
+                alert('New added successfully');
             })
 
     }

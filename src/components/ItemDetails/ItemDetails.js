@@ -10,14 +10,13 @@ const ItemDetails = () => {
     const [change, setChanges] = useState('hello');
 
     useEffect(() => {
-        fetch('https://sheltered-fortress-61368.herokuapp.com/item/' + itemsId)
+        fetch(`https://sheltered-fortress-61368.herokuapp.com/item/${itemsId}` )
             .then(res => res.json())
             .then(data => {
                 setItems(data);
-                
             })
 
-    }, [change]);
+    }, [items]);
 
     const handleDeliver = () => {
 
@@ -85,7 +84,7 @@ const ItemDetails = () => {
             </div>
             <div style ={{marginTop: '200px'}} className='col-md-6'>
                 <div className="mb-3">
-                    <label className="form-label">Add quantity</label>
+                    <h3 className="form-label">Add quantity</h3>
                     <input onChange={(e) => setQuantity(e.target.value)} value={quantity} type="number" name='number' className="form-control" />
                 </div>
                 <button onClick={handleUpdateCount} className="btn btn-primary">Increase Quantity</button> <br />
